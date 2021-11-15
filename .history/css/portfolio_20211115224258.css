@@ -56,6 +56,10 @@
 .project-image-big img,
 .project-image-small img {
   animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
 }
 @keyframes fadeIn {
   0% {
@@ -65,7 +69,38 @@
     opacity: 1;
   }
 }
-
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .portfolio .category-name {
   margin-bottom: 1rem;
   color: var(--gray9);
@@ -85,29 +120,17 @@
   background-repeat: no-repeat;
   border: none;
   background-image: linear-gradient(155deg, #ff9c82, #fd1a67);
-  /* transition: background 0.3s linear; */
+  transition: background 0.3s linear;
   height: auto;
-  position: relative;
-  z-index: 1;
 }
-.portfolio-introBtn::before {
-  border-radius: 1rem;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
+.portfolio-introBtn:hover {
+  background-size: 100% 100%;
   background-image: linear-gradient(155deg, #ff4264, #96005a);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-.portfolio-introBtn:hover::before {
-  opacity: 1;
+  transition: all 0.5s;
 }
 a.portfolio-introBtn:hover {
   text-decoration: none;
+  padding: 3rem;
 }
 .portfolio-introBtn img {
   background-color: transparent;

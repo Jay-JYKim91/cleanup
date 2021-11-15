@@ -24,6 +24,8 @@
   margin-top: 3rem;
   /* width: 100%; */
   height: auto;
+  position: absolute;
+  display: block;
 }
 .project-image-name {
   position: absolute;
