@@ -48,7 +48,7 @@
 }
 
 .portfolio-menu-sm {
-  display: none;
+  opacity: 0;
   height: 40px;
   background-color: var(--purple2);
   position: fixed;
@@ -57,9 +57,9 @@
   width: 100%;
   z-index: 999;
   padding: 0;
-  transition: all 0.5s ease-in-out;
-  }
-  .portfolio-menu-sm .container {
+  transition: opacity 0.3s ease-in-out;
+}
+.portfolio-menu-sm .container {
   margin: 0;
   text-align: center;
 }
