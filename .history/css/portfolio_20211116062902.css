@@ -189,9 +189,6 @@ a.portfolio-introBtn:hover {
   padding: 0;
   padding-top: 0.2rem;
 }
-.project-text-description .table-container {
-  overflow-x: hidden;
-}
 .description-category {
   color: #c7c7c7;
 }

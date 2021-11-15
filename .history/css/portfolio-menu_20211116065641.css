@@ -22,9 +22,11 @@
 }
 .portfolio-menu .category-name {
   color: var(--white);
+  /* text-decoration: underline var(--purple1);
+  text-underline-position: under; */
   border-bottom: 3px var(--purple1) solid;
   width: fit-content;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1.5rem 0;
   transition: all 0.5s;
 }
 .portfolio-menu .column:hover h2 {
@@ -113,9 +115,6 @@
   /* .portfolio-menu .container {
     padding-top: var(--space-s);
   } */
-  .portfolio-menu .category-name {
-    margin: 0 auto 1.5rem auto;
-  }
   .portfolio-menu .arrowhead {
     width: 16%;
     height: 16%;
