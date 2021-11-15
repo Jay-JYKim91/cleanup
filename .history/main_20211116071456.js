@@ -51,9 +51,9 @@ const smallMenuReadymade = document.getElementById('smallMenuReadymade');
 const smallMenuEducation = document.getElementById('smallMenuEducation');
 let offSet = window.pageYOffset;
 const portfolioCustomOffset = document.getElementById('portfolio__custom').getBoundingClientRect().top + offSet;
-const portfolioReadymadeOffset = document.getElementById('portfolio__readymade').getBoundingClientRect().top + offSet;
-const portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet;
-const portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet;
+const portfolioReadymadeOffset = document.getElementById('portfolio__readymade').getBoundingClientRect().top + offSet + 1000;
+const portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet +1000;
+const portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet +1000;
 
 // console.log(portfolioCustomOffset);
 // console.log(portfolioReadymadeOffset);

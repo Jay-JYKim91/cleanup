@@ -36,7 +36,7 @@
 .project-image-credit {
   position: absolute;
   /* transform: translate(-50%, -50%); */
-  bottom: 2%;
+  bottom: 1%;
   right: 0;
   background-color: rgba(151, 151, 151, 0.3);
   color: var(--white);
@@ -210,9 +210,6 @@ a.portfolio-introBtn:hover {
 }
 
 @media screen and (min-width: 426px) {
-  .project-image-credit {
-    bottom: 1%;
-  }
   .project-image-small {
     display: block;
     padding: 0;
