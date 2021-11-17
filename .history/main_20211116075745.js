@@ -5,16 +5,12 @@ const observer = lozad('.lozad', {
 observer.observe();
 // Progressive loading End
 
-
-
 // Display current year in footer Start
 const year = document.querySelector('#currentYear');
 let now = new Date();
 let currentYear = now.getFullYear();
 year.innerText = currentYear;
 // Display current year in footer End
-
-
 
 // Move to portfolio section Start
 const menuToCustom = document.getElementsByClassName('menuToCustom');
@@ -48,18 +44,27 @@ item.addEventListener('click', () => {
 });
 // Move to portfolio section End
 
-
-
 // Display small size of portfolio-menu Start
 const smallMenu = document.getElementById('smallMenu');
 const smallMenuCustom = document.getElementById('smallMenuCustom');
 const smallMenuReadymade = document.getElementById('smallMenuReadymade');
 const smallMenuEducation = document.getElementById('smallMenuEducation');
 let offSet = window.pageYOffset;
-const portfolioCustomOffset = document.getElementById('portfolio__custom').getBoundingClientRect().top + offSet;
-const portfolioReadymadeOffset = document.getElementById('portfolio__readymade').getBoundingClientRect().top + offSet;
-const portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet;
-const portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet;
+let portfolioCustomOffset = document.getElementById('portfolio__custom').getBoundingClientRect().top + offSet;
+let portfolioReadymadeOffset = document.getElementById('portfolio__readymade').getBoundingClientRect().top + offSet;
+let portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet;
+let portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet;
+
+window.addEventListener('load', () => {
+  portfolioCustomOffset = document.getElementById('portfolio__custom').getBoundingClientRect().top + offSet;
+  portfolioReadymadeOffset = document.getElementById('portfolio__readymade').getBoundingClientRect().top + offSet;
+  portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet;
+  portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet;
+  console.log(portfolioReadymadeOffset);
+  console.log(portfolioReadymadeOffset);
+  console.log(portfolioEducationOffset);
+  console.log(portfolioFinishOffset);
+})
 
 // console.log(portfolioCustomOffset);
 // console.log(portfolioReadymadeOffset);
@@ -71,27 +76,27 @@ window.addEventListener('scroll', () => {
   console.log(currentOffset);
 
   if (currentOffset > portfolioFinishOffset) {
-    smallMenu.style.display = 'block';
+    smallMenu.style.opacity = '1';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.remove('active-menu');
     smallMenuEducation.classList.remove('active-menu');
   } else if (currentOffset > portfolioEducationOffset) {
-    smallMenu.style.display = 'block';
+    smallMenu.style.opacity = '1';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.remove('active-menu');
     smallMenuEducation.classList.add('active-menu');
   } else if (currentOffset > portfolioReadymadeOffset) {
-    smallMenu.style.display = 'block';
+    smallMenu.style.opacity = '1';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.add('active-menu');
     smallMenuEducation.classList.remove('active-menu');
   } else if (currentOffset > portfolioCustomOffset) {
-    smallMenu.style.display = 'block';
+    smallMenu.style.opacity = '1';
     smallMenuCustom.classList.add('active-menu');
     smallMenuReadymade.classList.remove('active-menu');
     smallMenuEducation.classList.remove('active-menu');
   } else if (currentOffset < portfolioCustomOffset) {
-    smallMenu.style.display = 'none';
+    smallMenu.style.opacity = '0';
   };
 });
 

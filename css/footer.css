@@ -1,9 +1,15 @@
 .footer {
   background-color: var(--gray1);
-  padding: var(--space-l) 0;
+  padding: var(--space-m) 0;
   color: var(--gray7);
 }
 .footer span,
 .footer p {
   margin-top: 0.3rem;
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    padding: var(--space-l) 0;
+  }
 }

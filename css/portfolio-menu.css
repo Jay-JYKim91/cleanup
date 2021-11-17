@@ -7,7 +7,6 @@
 }
 .portfolio-menu .container {
   padding-top: var(--space-s);
-  margin: 0;
 }
 .portfolio-menu .section-name {
   color: var(--white);
@@ -17,7 +16,6 @@
   text-align: center;
 }
 .portfolio-menu .columns .column {
-  padding: var(--space-xs);
   cursor: pointer;
 }
 .portfolio-menu .category-name {
@@ -34,6 +32,7 @@
 .portfolio-menu .description-big {
   color: var(--purple1);
   transition: all 0.5s;
+  display: none;
 }
 .portfolio-menu .column:hover .description-big {
   color: var(--green2);
@@ -47,9 +46,8 @@
 .portfolio-menu .column:hover .arrowhead {
   opacity: 1;
 }
-
 .portfolio-menu-sm {
-  opacity: 0;
+  display: none;
   height: 40px;
   background-color: var(--purple2);
   position: fixed;
@@ -58,7 +56,6 @@
   width: 100%;
   z-index: 999;
   padding: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 .portfolio-menu-sm .container {
   margin: 0;
@@ -90,9 +87,9 @@
 }
 
 @media screen and (min-width: 426px) {
-  /* .portfolio-menu .container {
-    padding-top: var(--space-m);
-  } */
+  .portfolio-menu .description-big {
+    display: block;
+  }
   .portfolio-menu .arrowhead {
     width: 14%;
     height: 14%;
@@ -109,10 +106,8 @@
     margin-top: 0.8rem;
   }
 }
+
 @media screen and (min-width: 769px) {
-  /* .portfolio-menu .container {
-    padding-top: var(--space-s);
-  } */
   .portfolio-menu .category-name {
     margin: 0 auto 1.5rem auto;
   }
@@ -132,6 +127,7 @@
     margin-top: 1rem;
   }​
 }
+
 @media screen and (min-width: 1024px) {
   .portfolio-menu .container {
     padding: var(--space-m) 0 var(--space-s) 0;
@@ -179,9 +175,6 @@
       }
 }
 @media screen and (min-width: 1441px) {
-  /* .portfolio-menu .container {
-    margin: 0 auto;
-  } */
   .portfolio-menu-sm .container {
           margin: 0 auto;
       }

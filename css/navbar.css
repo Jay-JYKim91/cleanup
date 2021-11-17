@@ -3,9 +3,6 @@
   width: 100%;
   padding: 0 var(--space-xs);
   border-bottom: 1px var(--black) solid;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 }
 .navbar .container {
   margin: 0;
@@ -22,6 +19,7 @@
   height: 3.5rem;
   background-image: linear-gradient(150deg, #ff9c82, #fd1a67);
 }
+
 @media screen and (min-width: 769px) {
   .navbar .container {
     max-width: 100%;
@@ -35,6 +33,7 @@
     height: 5rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .navbar {
     padding: 0 3rem;

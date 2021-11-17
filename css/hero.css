@@ -273,9 +273,6 @@
     .website-headline .small {
         font-size: var(--size-m1);
     }
-    .hero .characters {
-        /* overflow: hidden; */
-    }
     .hero .characters .castle {
         width: 26rem;
         margin-left: -35em;
