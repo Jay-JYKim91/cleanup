@@ -73,22 +73,26 @@ window.addEventListener('scroll', () => {
   const portfolioEducationOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().top + offSet;
   const portfolioFinishOffset = document.getElementById('portfolio__education-process').getBoundingClientRect().bottom + offSet;
   let currentOffset = window.scrollY || document.documentElement.scrollTop;
+  console.log('Current -> ' + currentOffset + ' Custom -> ' + portfolioCustomOffset + ' portfolioReadymadeOffset -> ' + portfolioReadymadeOffset + ' portfolioEducationOffset -> ' + portfolioEducationOffset + ' portfolioFinishOffset -> ' + portfolioFinishOffset);
 
   if (currentOffset > portfolioFinishOffset) {
     smallMenu.style.display = 'block';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.remove('active-menu');
     smallMenuEducation.classList.remove('active-menu');
+  // } else if (currentOffset > portfolioEducationOffset) {
   } else if (currentOffset >= portfolioEducationOffset && currentOffset < portfolioFinishOffset) {
     smallMenu.style.display = 'block';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.remove('active-menu');
     smallMenuEducation.classList.add('active-menu');
+  // } else if (currentOffset > portfolioReadymadeOffset) {
   } else if (currentOffset >= portfolioReadymadeOffset && currentOffset < portfolioEducationOffset) {
     smallMenu.style.display = 'block';
     smallMenuCustom.classList.remove('active-menu');
     smallMenuReadymade.classList.add('active-menu');
     smallMenuEducation.classList.remove('active-menu');
+  // } else if (currentOffset > portfolioCustomOffset) {
   } else if (currentOffset >= portfolioCustomOffset && currentOffset < portfolioReadymadeOffset) {
     smallMenu.style.display = 'block';
     smallMenuCustom.classList.add('active-menu');
